@@ -1,13 +1,41 @@
+@import 'variables';
+@import 'nav';
+
 *{
 	box-sizing:border-box;
 	padding: 0;
 	margin: 0;
 }
 
-$columns: 12;
-$columnWidth: 100% / $columns;
-@for $i from 1 through $columns{
-	.col#{$i}{
-		width: $columnWidth * $i; 
+
+#headerNav{
+	background-color: $mainColour;
+	ul{
+		li{
+			color: blue;
+		}
 	}
-} 
+	p{ 
+		width: 50px
+	 }
+}
+
+#footerNav{
+	ul{
+		li{
+			color: green;
+		}
+	}
+}
+
+h1{
+	@include colourLayout;
+}
+
+h5{
+	@include colourLayout;
+}
+
+.button{
+	@include colourLayout;
+}
